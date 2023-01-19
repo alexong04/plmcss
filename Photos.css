@@ -1,0 +1,659 @@
+* {
+  box-sizing: border-box;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(PHOTOS/css-photos/navBg.png);
+  background-color: #22314d;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%; 
+  font-family: Glacial Indifference;
+}
+
+
+/* H E A D E R */
+
+
+header {
+  width: 100%;
+  height: 8em;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #22314d;
+  vertical-align: middle;
+}
+
+#cssLogo{
+  width: 80px;
+  height: 80px;
+}
+
+#headSection1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+#headSection1 ul li{
+  float: left;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1.2px;
+  
+}
+
+#headSection1 ul li a{
+  display: block;
+  text-decoration: none;
+  color: #e0e3e4;
+  font-family: 'Secular One', sans-serif;
+  font-weight: 600;
+}
+
+
+/* P I C T U R E  */
+
+
+
+.wrapper, .slide {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slide{
+  overflow: hidden;
+}
+
+.slide .slideShow {
+  object-fit: cover;
+  height: 600px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4s);
+  opacity: 0.8;
+}
+
+.slide .image-data {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 10
+}
+
+.image-data .text{
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
+.image-data h2{
+  font-size: 65px;
+  font-weight: 600;
+  color:  #f3f4e3;
+  font-family: 'Secular One', sans-serif;
+}
+
+/* BUTTON */
+
+a.button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: none;
+  border: solid #f3f4e3 .18em;
+  width: 10em;
+  text-decoration: none;
+  margin-top: -30px;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  color: #e0e3e4;
+  font-weight: 400;
+  font-family: 'Secular One', sans-serif;
+  letter-spacing: 1px;
+}
+
+a.button:hover{
+  color: #222;
+  background-color: #f3f4e3;
+}
+
+
+
+
+/* S E C T I O N 2 & 3 STYLE */
+
+
+.sectionWrapper {
+  width: 80%;
+  height: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  /* display: grid;
+  grid-template-columns: 1fr  1fr; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start; 
+}
+
+
+
+
+/* G A L L E R Y   D E S C R I P T I O N    D A T A*/
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 45px;
+  padding-bottom: 0;
+  background: #f3f4e3;
+}
+
+.reText {
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.3em;
+}
+
+.eventDate, .eventDS {
+  font-family: 'Roboto Slab', serif;
+}
+
+.eventTitle {
+  font-weight: 700;
+  font-size: 2.2em;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  font-family: 'Secular One', sans-serif;
+}      
+
+.eventDate {
+  margin-top: 2px;
+  margin-bottom: 55px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.eventDS {
+  position: relative;
+  font-size: 16px;
+}
+
+
+
+
+
+/* G A L L E R  Y #1   S T Y L E S */
+
+/* Position the image container (needed to position the left and right arrows) */
+.galleryBox {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  padding: 16px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 5%;
+  bottom: 5%;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/*  pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position of "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover (Bottom Thumbnail) */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+/* SECTION 3 */
+.divider {
+  height: 50px;
+}
+
+/* GALLERY 2 */
+
+/* Hide the images by default */
+.slides {
+display: none;
+}
+
+/* pointer when hovering over the thumbnail images */
+.cursor2 {
+cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+/* Position of "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover */
+.prev:hover,
+.next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+text-align: center;
+background-color: #222;
+padding: 2px 16px;
+color: white;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Six columns side by side */
+.column {
+float: left;
+width: 16.66%;
+}
+
+/* transparency effect for thumnbail images */
+.demo2 {
+opacity: 0.6;
+}
+
+.active,
+.demo2:hover {
+opacity: 1;
+}
+
+/* FOOTERRR*/
+      /* .footerContainer {
+        background: #000;
+        margin-bottom: 0;
+        
+        height: 10px;
+      } */
+
+      .foot  {
+        background-color: #000000;
+        opacity: .8;
+        color: #e0e3e4;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        margin-top: 80px;
+      }
+
+      .footer-block1 {
+        display: inline-block;
+        padding-top: 20px;
+        padding-right: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .f-pagename-block {
+        display: block;
+      }
+
+      .PLM {
+        font-family: 'Secular One', sans-serif;
+        font-weight: 300;
+        font-size: .9em;
+        letter-spacing: .2;   
+        margin-bottom: 0;
+      }
+
+      .CSSname {
+        margin-top: 0;
+        font-family: 'Secular One', sans-serif;
+        font-weight: 450;
+        font-size: 1.8em;
+        letter-spacing: .3;
+        margin-bottom: -15px;
+        padding-bottom: 0;     
+      }
+
+
+      
+      .copyright {
+        display: block;
+        font-size: 12px;
+        margin-top: 23px;
+      }
+
+      .copyright-content {
+        font-size: 14px;
+        max-width: 250px;
+        letter-spacing: 0.6px;
+      }
+
+
+      /* LOGOS */
+      .footer-block2 {
+        display: inline-block;
+        padding-top: 35px;
+        padding-left: 25px;
+      }
+
+      .footerCSSLogo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .footerPLMLogo {
+        width: 120px;
+        height: 120px;
+      }
+
+
+      /* SOCIALS */
+
+      .bottom-icons {
+        margin: 0;
+        padding-top: 5px;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        padding-left: 0px;
+                     
+      }
+
+      .socials li {
+        margin: 0 10px;
+      }
+
+      .socials a {
+        text-decoration: none;
+        color: #e0e3e4;
+      }
+
+/* NAVIGATION BAR */
+
+.nav {
+  z-index: 111;
+  position: absolute;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: left;
+}
+
+.nav a {
+  display: block;
+  color: white;
+  text-align: left;
+  text-indent: 40px;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav a.active,.nav a:hover,.menubarABT:hover,.menubarMEM:hover{
+  padding-left: 26px;
+  background-color: #ffffff;
+  color: black;
+  transition: .5s;
+}
+
+.nav li a:hover,.menubarABT:hover,.menubarMEM:hover {
+  background-color: #ffffff85;
+}
+
+/* MENUBAR */
+
+.menubar {
+  background-color: #22314dbd;
+  position: fixed;
+  overflow: auto;
+  right: -450px;
+  width: 450px;
+  height: 100%;
+  transition: all .5s ease;
+}
+
+/* MENU */
+
+.menu {
+  list-style-type: none;
+  overflow: hidden;
+  margin-left: -40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* SUBMENU */
+
+.submenu, .submenu2 {
+  width: 100%;
+  position: static;
+  max-height: 0px;
+  overflow: hidden;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.submenu a, .submenu2 a {
+  font-weight: normal;
+  font-size: 23px;
+}
+
+
+/* BUTTONS */
+
+label #btn, label #cancel {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+label #btn {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+  transition: all .5s;
+}
+
+label #cancel {
+  position: fixed;
+  font-size: 35px;
+  z-index: 1111;
+  right: 40px;
+  top: 20px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.menubarABT, .menubarMEM {
+  display: block;
+  color: white;
+  text-align: left;
+  text-indent: 40px;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BUTTON FUNCTIONS */
+
+#check, #about, #members {
+  display: none;
+}
+
+#check:checked ~ .menubar{
+  right: 0;
+}
+
+#check:checked ~ label #btn {
+  right: 400px;
+  transform: rotate(90deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  transform: rotate(90deg);
+  opacity: 100%;
+  right: 470px;
+}
+
+#about:checked ~ #submenuABT{
+  visibility: visible;
+  opacity: 1;
+  transition: .5s ease;
+  max-height: 100vh;
+}
+
+#about:checked ~ .menubarABT{
+  text-indent: 50px;
+}
+
+#members:checked ~ #submenuMEM {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s ease;
+  max-height: 100vh;
+}
+
+#members:checked ~ .menubarMEM {
+  text-indent: 50px;
+}
+
+/* DROPDOWNS */
+
+.submenu li:hover .submenu2{
+  visibility: visible;
+  opacity: 1;
+  transition: .5s ease;
+  max-height: 100vh;
+}

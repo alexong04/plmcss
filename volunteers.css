@@ -1,0 +1,587 @@
+/* Creatives Committee Specific CSS Start Here */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.CreativesPage img {
+    border: #eb528a 2px solid;
+}
+
+.CreativesPage h2 {
+    color: #eb528a;
+}
+
+.CreativesPage .MembersTitle{
+    color: #eb528a;
+}
+
+/* Creatives Committee Specific CSS End Here */
+
+/* Finance Committee Specific CSS Start Here */
+
+#FinancePage img {
+    border: #03d388 2px solid;
+}
+
+#FinancePage h2 {
+    color: #03d388;
+}
+
+#FinancePage .MembersTitle{
+    color: #03d388;
+}
+
+/* Finance Committee Specific CSS End Here */
+
+/* External Relations Committee Specific CSS Start Here */
+
+#ExternalRelationsPage img {
+    border: #fce679 2px solid;
+}
+
+#ExternalRelationsPage h2 {
+    color: #fce679;
+}
+
+#ExternalRelationsPage .MembersTitle{
+    color: #fce679;
+}
+
+/* External Relations Committee Specific CSS End Here */
+
+/* Secretariat Committee Specific CSS Start Here */
+
+#SecretariatPage img {
+    border: #5271ff 2px solid;
+}
+
+#SecretariatPage h2 {
+    color: #5271ff;
+}
+
+#SecretariatPage .MembersTitle{
+    color: #5271ff;
+}
+
+/* Secretariat Committee Specific CSS End Here */
+
+/* Internal Relations Committee Specific CSS Start Here */
+
+#InternalRelationsPage img {
+    border: #457bf5 2px solid;
+}
+
+#InternalRelationsPage h2 {
+    color: #457bf5;
+}
+
+#InternalRelationsPage .MembersTitle{
+    color: #457bf5;
+}
+
+/* Internal Relations Committee Specific CSS End Here */
+
+
+/* NavBar Code Starts Here */
+.grid-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.grid-column {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.NavButtonFlex {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.NavButton {
+    border-radius: 25px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    color: black;
+    width: 21ch;
+}
+
+.NavButton a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.NavButton a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.NavButton a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.NavButton a:active {
+    text-decoration: none;
+    color: black;
+}
+
+#NavButton-Internal {
+    background-color: #457bf5;
+    color: black;
+}
+
+#NavButton-Secretariat {
+    background-color: #0319cf;
+    color: white;
+}
+
+#NavButton-Secretariat a {
+    color:white;
+}
+
+#NavButton-External {
+    background-color: #fce679;
+}
+
+#NavButton-Creative {
+    background-color: #eb528a;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.75em;
+}
+
+#NavButton-Creative a {
+    color:white;
+}
+
+#NavButton-Finance {
+    background-color: #03d388;
+}
+
+/* NavBar Code Ends Here */
+
+/* Volunteer Box Code Start */
+#VolunteersBox{
+    text-align: center;
+    width:fit-content;
+    color: white;
+    padding: 4em;
+    margin: 0 auto;
+    border: none;
+}
+
+#VolunteersBox h1 {
+    font-size: 8rem;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+#VolunteersBox h3 {
+    font-size: 3rem;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight:lighter;
+}
+
+/* Volunteer Box Code End */
+
+/* Address Box Code Start */
+#AddressBox {
+    position: relative;
+    isolation:isolate;
+    width:fit-content;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+#AddressBox::after {
+    content:'';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: .4;
+    background-color: black;
+}
+
+#AddressBoxPLMText {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#AddressBoxPLMText h1 {
+    color: #ffe68f;
+    font-size: 4rem;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+#AddressBoxPLMText h2 {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight:lighter;
+}
+
+#CSSLogo{
+    max-width: 8em;
+}
+
+/* Address Box Code End */
+
+
+h3 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* .padding - section of chunk of nothing*/
+.padding {
+    padding: 5vh 0px;
+}
+
+#last-paddingfirstpage {
+    padding: 2vh 0px;
+}
+
+/* .flex - flex class*/
+.flex{
+    display: flex;
+}
+
+/* header - represents the first container with background of school*/
+header {
+    background-image: url("VOLUNTEERS/firstPageBackground.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Members Page Background Class */
+.MembersPage {
+    background-image: url("VOLUNTEERS/MembersPageBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.MembersBox {
+    background-color: #1c2120;
+    margin: 5%;
+}
+
+.MemberPicturesContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.MemberPictures {
+    justify-content: space-evenly;
+}
+
+.MemberPictures img {
+    max-width: 177px;
+    border-radius: 25px;
+}
+
+.MembersTitle {
+    font-size: 2rem;
+    font-family: 'Glacial Indifference', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.MemberPicturesContainer h1, h2 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* just setting this to 62.5% so that it has a base pixel of 10px and i could use rem much better.*/
+html {
+    font-size: 62.5%;
+}
+
+/* To remove the white space outside the body container.*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Glacial Indifference;
+}
+
+/* NAVIGATION BAR */
+
+.nav {
+    font-family: Glacial Indifference;
+    z-index: 111;
+    position: absolute;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    text-align: left;
+    text-indent: 40px;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav a.active,.nav a:hover,.menubarABT:hover,.menubarMEM:hover{
+    padding-left: 26px;
+    background-color: #ffffff;
+    color: black;
+    transition: .5s;
+}
+
+.nav li a:hover,.menubarABT:hover,.menubarMEM:hover {
+    background-color: #ffffff85;
+}
+
+/* MENUBAR */
+
+.menubar {
+    background-color: #22314dbd;
+    position: fixed;
+    overflow: auto;
+    right: -450px;
+    width: 450px;
+    height: 100%;
+    transition: all .5s ease;
+}
+
+/* MENU */
+
+.menu {
+    list-style-type: none;
+    overflow: hidden;
+    margin-left: -40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* SUBMENU */
+
+.submenu, .submenu2 {
+    width: 100%;
+    position: static;
+    max-height: 0px;
+    overflow: hidden;
+    list-style-type: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.submenu a, .submenu2 a {
+    font-weight: normal;
+    font-size: 23px;
+}
+
+
+/* BUTTONS */
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+label #btn {
+    position: fixed;
+    right: 40px;
+    top: 20px;
+    transition: all .5s;
+}
+
+label #cancel {
+    position: fixed;
+    font-size: 35px;
+    z-index: 1111;
+    right: 40px;
+    top: 20px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.menubarABT, .menubarMEM {
+    display: block;
+    color: white;
+    text-align: left;
+    text-indent: 40px;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* BUTTON FUNCTIONS */
+
+#check, #about, #members {
+    display: none;
+}
+
+#check:checked ~ .menubar{
+    right: 0;
+}
+
+#check:checked ~ label #btn {
+    right: 400px;
+    transform: rotate(90deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    transform: rotate(90deg);
+    opacity: 100%;
+    right: 470px;
+}
+
+#about:checked ~ #submenuABT{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s ease;
+    max-height: 100vh;
+}
+
+#about:checked ~ .menubarABT{
+    text-indent: 50px;
+}
+
+#members:checked ~ #submenuMEM {
+    visibility: visible;
+    opacity: 1;
+    transition: .5s ease;
+    max-height: 100vh;
+}
+
+#members:checked ~ .menubarMEM {
+    text-indent: 50px;
+}
+
+/* DROPDOWNS */
+
+.submenu li:hover .submenu2{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s ease;
+    max-height: 100vh;
+}
+
+/* FOOTERRR*/
+.foot  {
+    font-size: 100%;
+    background-color: #000000;
+    color: #e0e3e4;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+
+.footer-block1 {
+    display: inline-block;
+    padding-top: 30px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-pagename-block {
+    display: block;
+    
+
+}
+
+.PLM {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 300;
+    font-size: .9em;
+    letter-spacing: .2;   
+    text-align: left;
+}
+
+.CSSname {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 450;
+    font-size: 1.8em;
+    letter-spacing: .3;
+    margin-bottom: 0;
+    padding-bottom: 0;     
+}
+
+
+
+.copyright {
+    display: block;
+    font-size: 12px;
+    margin-top: 23px;
+}
+
+.copyright-content {
+    font-size: 14px;
+    max-width: 250px;
+    letter-spacing: 0.6px;
+}
+
+
+/* LOGOS */
+.footer-block2 {
+    display: inline-block;
+    padding-top: 35px;
+    padding-left: 25px;
+}
+
+.footerCSSLogo {
+    width: 120px;
+    height: 120px;
+}
+
+.footerPLMLogo {
+    width: 120px;
+    height: 120px;
+}
+
+
+/* SOCIALS */
+
+.bottom-icons {
+    padding-top: 5px;
+}
+.socials {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+                
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #e0e3e4;
+}

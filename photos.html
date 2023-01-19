@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photos | PLM CSS</title>
+    <link rel="shortcut icon" type="images/png" href="plmcss logo.png">
+    <script src="https://kit.fontawesome.com/d1e7505c10.js" crossorigin="anonymous"></script>
+  </head>
+
+  <!-- CSS  -->
+
+  <link rel="stylesheet" href="Photos.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Secular+One&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- footer -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <body>
+      <div class="nav">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="menubar">
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ann.html">ANNOUNCEMENTS</a></li>
+                <li>
+                    <input type="checkbox" id="about">
+                    <label class="menubarABT" for="about">ABOUT</label>
+                    <ul class="submenu" id="submenuABT">
+                        <li><a href="desc.html">DESCRIPTION</a></li>
+                        <li><a href="miss.html">MISSION</a></li>
+                        <li><a href="vis.html">VISION</a></li>
+                        <li><a href="ach.html">ACHIEVEMENTS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="members">
+                    <label class="menubarMEM" for="members">MEMBERS</label>
+                    <ul class="submenu" id="submenuMEM">
+                        <li><a href="fac.html" class="faculty">FACULTY</a>
+                            <ul class="submenu2">
+                                <li><a href="ptfac.html">PART-TIME FACULTY</a></li>
+                                <li><a href="nfac.html">NEW FACULTY</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="off.html">OFFICERS</a></li>
+                        <li><a href="vol.html">VOLUNTEERS</a></li>
+                    </ul>
+                </li>
+                <li><a href="merch.html">MERCHANDISE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a class="active" href="photos.html">PHOTOS</a></li>
+                <li><a href="webdev.html">WEB DEVELOPERS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- NAVIGATION AREA / HEADER PART -->
+    <header>
+      <section id="headSection1">
+        <img id="cssLogo" src="plmcss logo.png" alt="PLM CSS logo" />
+        <ul>
+          <li><a href="#">PLM CSS GALLERY</a></li>
+        </ul>
+      </section>
+    </header>
+    <!-- <div class="plmCSSGallery"><h1>PLM Computer Science Society Gallery</h1></div> -->
+
+    <main class="main">
+      <div class="wrapper">
+        <!-- SLIDE  -->
+
+        <div class="slide">
+          <img src="PHOTOS/css-photos/cssGApic3.jpg" alt="" class="slideShow" />
+
+          <div class="image-data">
+            <span class="text">
+              <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sint
+              id necessitatibus eius officiis soluta! -->
+            </span>
+            <h2>
+              COMPUTER SCIENCE SOCIETY <br />
+              GALLERY
+            </h2>
+            <a href="#photos" class="button">See Photos</a>
+          </div>
+          <!-- END OF DIV.IMG DATA -->
+        </div>
+        <!-- END OF DIV.SLIDE -->
+      </div>
+
+      <!-- PHOTOS POINT -->
+      <div id="photos"></div>
+
+      <!-- SECTION #2 -->
+      <section class="sectionWrapper">
+        <!-- GALLERY #1 DESCRIPTION -->
+        <div class="article">
+          <h3 class="reText">RECENT EVENT:</h3>
+          <p class="eventTitle">PLM CSS @ ReCET: KNIGHT'S CONVENTION 2022</p>
+          <p class="eventDate">November 29, 2022 (Tuesday)</p>
+        </div>
+
+        <!-- GALLERY #1 -->
+        <div class="galleryBox">
+          <div class="container">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic1.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic2.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic3.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic4.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic5.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="PHOTOS/css-photos/cetCSSpic6.jpg" style="width: 100%" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic1.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(1)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic2.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(2)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic3.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(3)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic4.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(4)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic5.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(5)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="PHOTOS/css-photos/cetCSSpic6.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(6)"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- SECTION #3 -->
+      <section class="sectionWrapper">
+        <!-- EVENT #2 DESCRIPTION -->
+        <div class="article">
+          <h3 class="reText">PREVIOUS EVENT:</h3>
+          <p class="eventTitle">
+            PLM COMPUTER SCIENCE SOCIETY GENERAL ASSEMBLY
+          </p>
+          <p class="eventDate">November 29, 2022 (Tuesday)</p>
+        </div>
+
+        <!-- GALLERY #2 -->
+
+        <!-- Container for the image gallery -->
+        <div class="galleryBox">
+          <div class="container">
+            <!-- Full-width images with number text -->
+            <div class="slides">
+              <div class="numbertext">1 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic1.jpg" style="width: 100%" />
+            </div>
+
+            <div class="slides">
+              <div class="numbertext">2 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic2.jpg" style="width: 100%" />
+            </div>
+
+            <div class="slides">
+              <div class="numbertext">3 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic3.jpg" style="width: 100%" />
+            </div>
+
+            <div class="slides">
+              <div class="numbertext">4 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic4.jpg" style="width: 100%" />
+            </div>
+
+            <div class="slides">
+              <div class="numbertext">5 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic5.jpg" style="width: 100%" />
+            </div>
+
+            <div class="slides">
+              <div class="numbertext">6 / 6</div>
+              <img src="PHOTOS/css-photos/cssGApic6.jpg" style="width: 100%" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption2"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic1.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(1)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic2.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(2)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic3.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(3)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic4.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(4)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic5.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(5)"
+                  alt=""
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo2 cursor2"
+                  src="PHOTOS/css-photos/cssGApic6.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide2(6)"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF GALLERY 2  -->
+      </section>
+    </main>
+
+    <!-- F O O T E R  -->
+    <footer>
+      <div class="foot">
+        <div class="footer-block1">
+          <div class="f-pagename-block">
+            <h2 class="PLM">PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+            <h2 class="CSSname">Computer Science Society</h2>
+          </div>
+
+          <!-- SOCIALS -->
+          <div class="bottom-icons">
+            <ul class="socials">
+              <li>
+                <a
+                  href="https://www.facebook.com/PLMComputerScienceSociety
+          "
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="mailto:plmcss.org@gmail.com"
+                  ><i class="fa fa-envelope"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com.ph/maps/dir//Pamantasan+ng+Lungsod+ng+Maynila,+General+Luna,+Muralla+Street,+Intramuros,+Manila,+Metro+Manila/@14.5867874,120.9411578,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3397ca2336770053:0x1b731714778d3506!2m2!1d120.9761774!2d14.58679!3e0
+          "
+                  ><i class="fa fa-location-arrow"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="copyright">
+            <p class="copyright-content">
+              Copyright &copy;2023 PLM CSS. <br />
+              Designed by Group 3
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-block2">
+          <img src="plmcss logo.png" alt="" class="footerCSSLogo" />
+          <img src="plm logo.png" alt="" class="footerPLMLogo" />
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    // PART TWOO
+
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+      showSlides2((slideIndex2 += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+      showSlides2((slideIndex2 = n));
+    }
+
+    function showSlides2(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("demo2");
+      let captionText = document.getElementById("caption2");
+      if (n > slides.length) {
+        slideIndex2 = 1;
+      }
+      if (n < 1) {
+        slideIndex2 = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex2 - 1].style.display = "block";
+      dots[slideIndex2 - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex2 - 1].alt;
+    }
+  </script>
+</html>

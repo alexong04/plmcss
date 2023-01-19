@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Merch | PLM CSS</title>
+        <link rel="shortcut icon" type="images/png" href="plmcss logo.png">
+        <script src="https://kit.fontawesome.com/d1e7505c10.js" crossorigin="anonymous"></script>
+        <style>
+            @font-face {
+                font-family: "GlacialIndifference";
+                src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf");
+            }
+
+            @font-face {
+                font-family: "GlacialIndifference";
+                src: url("fonts/glacial-indifference/GlacialIndifference-Bold.otf");
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: "RobotoSlab";
+                src: url("fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+            }
+
+            @font-face {
+                font-family: "Garamond";
+                src: url("fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: grey;
+                border-radius: 8px;
+            }
+
+            body {
+                background-image: url(MERCH/merchbg.png);
+                background-size: cover;
+                height: 100vh;
+            }
+
+            .topPage h1, .topPage h4, .topPage h5, .topPage h6 {
+                color: black;
+            }
+
+            .topPage h4 {
+                font-size: 50px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .topPage h5 {
+                font-size: 25px;
+            }
+
+            .topPage h1, .topPage h4, .topPage h5 {
+                padding-left: 100px;
+            }
+
+            .topPage h4, .topPage h5, .topPage h6 {
+                font-family: GlacialIndifference;
+                font-weight: lighter;
+            }
+
+            .topPage h1 {
+                margin-bottom: 3px;
+                font-size: 100px;
+                line-height: 1;
+                font-family: RobotoSlab;
+                font-weight: lighter;
+            }
+
+            .topPage h6 {
+                margin-left: 20px;
+                font-size: 20px;
+            }
+                
+            .logo div {
+                margin-top: 5px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .topPage img {
+                height: 100px;
+                margin-left: 100px;
+            }
+
+            .bottomPage {
+                background-image: url(MERCH/merchbg2.png);
+                background-size: cover;
+                height: 100%;
+
+                left: 0;
+                padding: 50px;
+                margin: 0;
+            }
+
+            .bottomPage div {
+                display: inline-block;
+            }
+
+            .bottomPage h2 , .bottomPage h3{
+                font-family: GlacialIndifference;
+                text-align: center;
+            }
+
+            .bottomPage h2 {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            .bottomPage h3{
+                margin-top: 0;
+                font-size: 20px;
+            }
+
+            .lanyard {
+                margin-left: 150px;
+                margin-top: 300px;
+            }
+
+            .tshirt {
+                margin-left: 480px;
+                margin-top: 300px;
+            }
+
+            .popup {
+                position: relative;
+                cursor: pointer;
+                font-family: GlacialIndifference;
+                margin-left: 10px;
+            }
+
+            .popup .popuptext {
+                visibility: hidden;
+                width: 250px;
+                background-color: #22314D;
+                color: #FFFFFF;
+                text-align: center;
+                border-radius: 10px;
+                padding: 10px;
+                position: absolute;
+                z-index: 1;
+                margin-left: -150px;
+            }
+
+            .bottomPage h6 {
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .popup h6:hover {
+                color: white;
+            }
+
+            td {
+                padding: 0 20px;
+            }
+
+
+            .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+            }
+
+            @-webkit-keyframes fadeIn {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+
+            @keyframes fadeIn {
+                from {opacity: 0;}
+                to {opacity:1 ;}
+            }
+
+            /* NAVIGATION BAR */
+
+            .nav {
+                    font-family: GlacialIndifference;
+                    z-index: 111;
+                    position: absolute;
+                    height: 100%;
+                    margin-top: -42px;
+                    margin-bottom: 0;
+                    float: left;
+                }
+
+                .nav a {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                .nav a.active,.nav a:hover,.menubarABT:hover,.menubarMEM:hover{
+                    padding-left: 26px;
+                    background-color: #ffffff;
+                    color: black;
+                    transition: .5s;
+                }
+
+                .nav li a:hover,.menubarABT:hover,.menubarMEM:hover {
+                    background-color: #ffffff85;
+                }
+
+            /* MENUBAR */
+
+                .menubar {
+                    background-color: #979797c1;
+                    position: fixed;
+                    overflow: auto;
+                    right: -450px;
+                    width: 450px;
+                    height: 100%;
+                    transition: all .5s ease;
+                }
+
+            /* MENU */
+            
+                .menu {
+                    list-style-type: none;
+                    overflow: hidden;
+                    margin-left: -40px;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+            /* SUBMENU */
+
+                .submenu, .submenu2 {
+                    width: 100%;
+                    position: static;
+                    max-height: 0px;
+                    overflow: hidden;
+                    list-style-type: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+
+                .submenu a, .submenu2 a {
+                    font-weight: normal;
+                    font-size: 23px;
+                }
+            
+
+            /* BUTTONS */
+
+                label #btn, label #cancel {
+                    position: absolute;
+                    cursor: pointer;
+                    font-size: 30px;
+                    color: white;
+                }
+
+                label #btn {
+                    position: fixed;
+                    right: 40px;
+                    top: 20px;
+                    transition: all .5s;
+                }
+
+                label #cancel {
+                    position: fixed;
+                    font-size: 35px;
+                    z-index: 1111;
+                    right: 40px;
+                    top: 20px;
+                    opacity: 0;
+                    transition: all .5s ease;
+                }
+
+                .menubarABT, .menubarMEM {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+            /* BUTTON FUNCTIONS */
+
+                #check, #about, #members {
+                    display: none;
+                }
+
+                #check:checked ~ .menubar{
+                    right: 0;
+                }
+
+                #check:checked ~ label #btn {
+                    right: 400px;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                #check:checked ~ label #cancel {
+                    transform: rotate(90deg);
+                    opacity: 100%;
+                    right: 470px;
+                }
+
+                #about:checked ~ #submenuABT{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #about:checked ~ .menubarABT{
+                    text-indent: 50px;
+                }
+
+                #members:checked ~ #submenuMEM {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #members:checked ~ .menubarMEM {
+                    text-indent: 50px;
+                }
+
+            /* DROPDOWNS */
+
+                .submenu li:hover .submenu2{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+            /* FOOTERRR*/
+                .foot  {
+                    font-family: GlacialIndifference;
+                    padding: 0;
+                    margin: 0;
+                    background-color: #000000;
+                    color: #e0e3e4;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+
+                .footer-block1 {
+                    display: inline-block;
+                    padding-top: 10px;
+                    align-items: center;
+                    text-align: left;
+                    justify-content: center;
+                    margin-left: 50px;
+                }
+
+                .f-pagename-block {
+                    display: block;
+                }
+
+                .PLM {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 300;
+                    font-size: .9em;
+                    letter-spacing: .2;   
+                }
+
+                .CSSname {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 450;
+                    font-size: 1.8em;
+                    letter-spacing: .3;
+                    margin-top: -10px;
+                    margin-bottom: 0;
+                    padding-bottom: -10px;     
+                }
+
+                .copyright {
+                    display: block;
+                    font-size: 12px;
+                    margin-top: -5px;
+                }
+
+                .copyright-content {
+                    font-size: 14px;
+                    max-width: 250px;
+                    letter-spacing: 0.6px;
+                }
+
+
+                /* LOGOS */
+                .footer-block2 {
+                    display: inline-block;
+                    padding-top: 35px;
+                    margin-left: 20px;
+                }
+
+                .footerCSSLogo, .footerPLMLogo {
+                    width: 100px;
+                    height: 100px;
+                }
+
+
+                /* SOCIALS */
+
+                .bottom-icons {
+                    margin-top: -10px;
+                    padding: 0;
+
+                }
+
+                .socials {
+                    list-style: none;
+                    display: flex;
+                    padding-left: 0px;
+                                
+                }
+
+                .socials li {
+                    margin: 0 10px;
+                }
+
+                .socials a {
+                    text-decoration: none;
+                    color: #e0e3e4;
+                }
+        </style>
+    </head>
+    <body>
+        <!--NAV BAR-->
+        <div class="nav">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ann.html">ANNOUNCEMENTS</a></li>
+                    <li>
+                        <input type="checkbox" id="about">
+                        <label class="menubarABT" for="about">ABOUT</label>
+                        <ul class="submenu" id="submenuABT">
+                            <li><a href="desc.html">DESCRIPTION</a></li>
+                            <li><a href="miss.html">MISSION</a></li>
+                            <li><a href="vis.html">VISION</a></li>
+                            <li><a href="ach.html">ACHIEVEMENTS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="members">
+                        <label class="menubarMEM" for="members">MEMBERS</label>
+                        <ul class="submenu" id="submenuMEM">
+                            <li><a href="fac.html" class="faculty">FACULTY</a>
+                                <ul class="submenu2">
+                                    <li><a href="ptfac.html">PART-TIME FACULTY</a></li>
+                                    <li><a href="nfac.html">NEW FACULTY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="off.html">OFFICERS</a></li>
+                            <li><a href="vol.html">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="merch.html">MERCHANDISE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="photos.html">PHOTOS</a></li>
+                    <li><a href="webdev.html">WEB DEVELOPERS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--TOP PAGE-->
+        <div class="topPage">
+            <h5>PAMANTASAN NG LUNGSOD NG MAYNILA</h5>
+            <h1><b>COMPUTER <br>SCIENCE <br>SOCIETY</b></h1>
+            <h4>Premium Quality Goods</h4>
+            <div class="logo">
+                <div><img src="plmcss logo.png" alt="PLM CSS Logo"></div>
+                <div><h6>A.Y. (2022-2023)<br>ESTABLISHED SINCE 2018</h6></div>
+            </div>
+        </div><br><br><br><br>
+
+        <!--BOTTOM PAGE-->
+
+        <div class="bottomPage">
+            <div class="lanyard">
+                <h2>LANYARD</h2>
+                <h3>₱ 72.00</h3>
+            </div>
+            <div class="tshirt">
+                <h2>T-SHIRT</h2>
+                <h3>₱ 250.00</h3>
+                <div class="popup" onclick="myFunction()"><h6>v SIZES v</h6>
+                    <span class="popuptext" id="myPopup">
+                        <table align="center">
+                            <tr>
+                                <th>size</th>
+                                <th>inch</th>
+                                <th>cm</th>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>36-35</td>
+                                <td>91-95</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>38-40</td>
+                                <td>96-100</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>40-42</td>
+                                <td>100-108</td>
+                            </tr>
+                        </table>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- F O O T E R  -->
+        <footer>
+            <div class="foot">
+            <div class="footer-block1">
+                <div class="f-pagename-block">
+                <h2 class="PLM">PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                <h2 class="CSSname">Computer Science Society</h2>
+                </div>
+    
+                <!-- SOCIALS -->
+                <div class="bottom-icons">
+                <ul class="socials">
+                    <li>
+                    <a
+                        href="https://www.facebook.com/PLMComputerScienceSociety
+                "
+                        ><i class="fa fa-facebook"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a href="mailto:plmcss.org@gmail.com"
+                        ><i class="fa fa-envelope"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a
+                        href="https://www.google.com.ph/maps/dir//Pamantasan+ng+Lungsod+ng+Maynila,+General+Luna,+Muralla+Street,+Intramuros,+Manila,+Metro+Manila/@14.5867874,120.9411578,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3397ca2336770053:0x1b731714778d3506!2m2!1d120.9761774!2d14.58679!3e0
+                "
+                        ><i class="fa fa-location-arrow"></i
+                    ></a>
+                    </li>
+                </ul>
+                </div>
+    
+                <div class="copyright">
+                <p class="copyright-content">
+                    Copyright &copy;2023 PLM CSS. <br />
+                    Designed by Group 3
+                </p>
+                </div>
+            </div>
+    
+            <div class="footer-block2">
+                <img src="plmcss logo.png" alt="" class="footerCSSLogo" />
+                <img src="plm logo.png" alt="" class="footerPLMLogo" />
+            </div>
+            </div>
+        </footer>
+
+        <script>
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+    </body>
+</html>

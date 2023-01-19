@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Faculty | PLM CSS</title>
+        <link rel="shortcut icon" type="images/png" href="plmcss logo.png">
+        <script src="https://kit.fontawesome.com/d1e7505c10.js" crossorigin="anonymous"></script>
+
+        <style>
+            /*FONTS*/
+            @font-face {
+                font-family: "GlacialIndifference";  
+                src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf"); 
+            }
+
+            @font-face {
+                font-family: "GlacialIndifference";
+                src: url("fonts/glacial-indifference/GlacialIndifference-Bold.otf");
+                font-weight: bold;
+            }
+            
+            @font-face {
+                font-family: "RobotoSlab";
+                src: url("fonts/RobotoSlab-VariableFont_wght.ttf");
+            }
+
+            * {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /*BODY*/
+            body {
+                font-family: GlacialIndifference;
+                background-image: url(plmbg2.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                height: 100%;
+            }
+
+            body::-webkit-scrollbar, .menubar::-webkit-scrollbar {
+                    display: none;
+            }
+
+
+            /*TITLE*/
+
+            .logo {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                padding-top: 70px;
+                margin: auto;
+                width: 60%;
+
+                font-family: GlacialIndifference;
+                font-size: 20px;
+                font-weight: bold;
+
+                z-index: -1;
+            }
+
+            .logo p {
+                padding-left: 10px;
+                text-align: center;
+                color: white;
+                border-bottom: 1px solid white;
+                padding-bottom: 3px;
+
+            }
+
+            .logo img {
+                height: 60px;
+                width: 60px;
+            }
+
+
+            /*BUTTONS*/
+
+            .rectanglepic {
+                background-color: rgb(5, 11, 47);
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                text-align: center;
+                opacity: 1.0;  
+
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .rectanglepic img {
+                width: 130px; 
+                height: 130px;
+            }
+ 
+            .rectanglename {
+                height: 20px;
+                width: 156px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                
+                font-family: GlacialIndifference;
+                font-weight: bold;
+                text-align: center;
+                font-size: 17px;
+                color: black;
+
+                background-color: #f1db26;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+ 
+            .officer {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 2px;
+                margin-right: 2px;
+                z-index: -1;
+            }
+ 
+            .officer:hover {
+                opacity: 0.8;
+                text-decoration: none;
+            }
+
+            button {
+                display: none;
+            }
+
+            .buttons {
+                margin-top: 40px;
+                text-align: center;
+            }
+
+
+            /*MODALS*/
+
+            .modal {
+                visibility: hidden;
+                position: fixed;
+                z-index: 1;
+
+                width: 580px;
+                height: 330px;
+                top: 50%;
+                left: 50%;
+                margin-top: -165px; /* Negative half of height. */
+                margin-left: -290px; /* Negative half of width. */
+                
+                /*color: #f1db26;*/
+                background-color: #22314d;
+                outline: 15px solid rgba(255, 255, 255, 0.671);
+
+                overflow: hidden;
+            }
+
+            .pic {
+                top: 0;
+                left: 0;
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                background: linear-gradient(
+                    to right,
+                    #f1db26 0%,
+                    #f1db26 50%,
+                    #22314d 50%,
+                    #22314d 100%
+                );
+            }
+
+            .pic img {
+                margin-top: 20%;
+                margin-bottom: auto;
+                margin-left: 50px;
+                height: 210px;
+                width: 210px;
+                border-radius: 5px;
+                outline: 5px solid #f1db26;
+            }
+
+            .officerbox p{
+                font-style: italic;
+                font-family: RobotoSlab, sans-serif;
+                font-size: 25px;
+                margin-top: 10%;
+                margin-left: 300px;
+                background-color: #ffffffbb;
+                color: black;
+                font-weight: bold;
+                width: fit-content;
+                z-index: 1;
+
+            }
+    
+            .facName {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, RobotoSlab, sans-serif;
+                color:white;
+                margin-top:20%;
+                margin-left:265px;
+                z-index: 1;
+                font-size: 23px;
+                font-weight: bold;
+                text-align:center;
+                width:-60px;
+                height: 20px;
+            }
+    
+            .facDesc {
+                font-family:Arial, Helvetica, sans-serif;
+                color:white;
+                margin-top:50px;
+                margin-left:265px;
+                z-index: 1;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .close, .close1, .close2, .close3, .close4, .close5, .close6, .close7 {
+                color: white;
+                float: right;
+                padding: 20px;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover, .close1:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close:focus {
+                color: yellow;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /*FOOTER*/
+
+            .officertitle {
+                visibility: visible;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size:40px;
+                color: white;
+                width: fit-content;
+                height: fit-content;
+                margin-left: 200px;
+                margin-top: 50px;
+
+                border-bottom: 4px solid #f1db26;
+                padding-bottom: 2px;
+            }
+
+            /* FOOTERRR*/
+                .foot  {
+                    visibility: visible;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    margin: 0;
+                    margin-top: 50px;
+                    background-color: #000000;
+                    /* background-image: url(css-photos/navBg.png); */
+                    opacity: .8;
+                    color: #e0e3e4;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: -10px;
+                }
+
+                .footer-block1 {
+                    display: inline-block;
+                    padding-top: 10px;
+                    padding-right: 30px;
+                    align-items: center;
+                    text-align: left;
+                    justify-content: center;
+                }
+
+                .f-pagename-block {
+                    display: block;
+                }
+
+                .PLM {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 300;
+                    font-size: .9em;
+                    letter-spacing: .2;   
+                }
+
+                .CSSname {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 450;
+                    font-size: 1.8em;
+                    letter-spacing: .3;
+                    margin-top: -10px;
+                    margin-bottom: 0;
+                    padding-bottom: -10px;     
+                }
+
+                .copyright {
+                    display: block;
+                    font-size: 12px;
+                }
+
+                .copyright-content {
+                    font-size: 14px;
+                    max-width: 250px;
+                    letter-spacing: 0.6px;
+                }
+
+
+                /* LOGOS */
+                .footer-block2 {
+                    display: inline-block;
+                    padding-top: 35px;
+                    padding-left: 25px;
+                }
+
+                .footerCSSLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                .footerPLMLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+
+                /* SOCIALS */
+
+                .bottom-icons {
+                    margin-top: -5px;
+                    padding: 0;
+
+                }
+                .socials {
+                    list-style: none;
+                    display: flex;
+                    padding-left: 0px;
+                                
+                }
+
+                .socials li {
+                    margin: 0 10px;
+                }
+
+                .socials a {
+                    text-decoration: none;
+                    color: #e0e3e4;
+                }
+
+                /* NAVIGATION BAR */
+
+                .nav {
+                    font-family: GlacialIndifference;
+                    z-index: 111;
+                    height: 100%;
+                    margin-bottom: 0;
+                    margin-top: -10px;
+                    float: left;
+                    position: absolute;
+                }
+
+                .nav a {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                .nav a.active,.nav a:hover,.menubarABT:hover,.menubarMEM:hover{
+                    padding-left: 26px;
+                    background-color: #ffffff;
+                    color: black;
+                    transition: .5s;
+                }
+
+                .nav li a:hover,.menubarABT:hover,.menubarMEM:hover {
+                    background-color: #ffffff85;
+                }
+
+                /* MENUBAR */
+
+                    .menubar {
+                        background-color: #22314dbd;
+                        position: fixed;
+                        overflow: auto;
+                        right: -450px;
+                        width: 450px;
+                        height: 100%;
+                        transition: all .5s ease;
+                    }
+
+                /* MENU */
+                
+                    .menu {
+                        list-style-type: none;
+                        overflow: hidden;
+                        margin-left: -40px;
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+                    }
+
+                /* SUBMENU */
+
+                    .submenu, .submenu2 {
+                        width: 100%;
+                        position: static;
+                        max-height: 0px;
+                        overflow: hidden;
+                        list-style-type: none;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .5s ease;
+                    }
+
+                    .submenu a, .submenu2 a {
+                        font-weight: normal;
+                        font-size: 23px;
+                    }
+                
+
+                /* BUTTONS */
+
+                    label #btn, label #cancel {
+                        position: absolute;
+                        cursor: pointer;
+                        font-size: 30px;
+                        color: white;
+                    }
+
+                    label #btn {
+                        position: fixed;
+                        right: 40px;
+                        top: 20px;
+                        transition: all .5s;
+                    }
+
+                    label #cancel {
+                        position: fixed;
+                        font-size: 35px;
+                        z-index: 1111;
+                        right: 40px;
+                        top: 20px;
+                        opacity: 0;
+                        transition: all .5s ease;
+                    }
+
+                    .menubarABT, .menubarMEM {
+                        display: block;
+                        color: white;
+                        text-align: left;
+                        text-indent: 40px;
+                        padding: 16px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                /* BUTTON FUNCTIONS */
+
+                    #check, #about, #members {
+                        display: none;
+                    }
+
+                    #check:checked ~ .menubar{
+                        right: 0;
+                    }
+
+                    #check:checked ~ label #btn {
+                        right: 400px;
+                        transform: rotate(90deg);
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    #check:checked ~ label #cancel {
+                        transform: rotate(90deg);
+                        opacity: 100%;
+                        right: 470px;
+                    }
+
+                    #about:checked ~ #submenuABT{
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .5s ease;
+                        max-height: 100vh;
+                    }
+
+                    #about:checked ~ .menubarABT{
+                        text-indent: 50px;
+                    }
+
+                    #members:checked ~ #submenuMEM {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .5s ease;
+                        max-height: 100vh;
+                    }
+
+                    #members:checked ~ .menubarMEM {
+                        text-indent: 50px;
+                    }
+
+                /* DROPDOWNS */
+
+                    .submenu li:hover .submenu2{
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .5s ease;
+                        max-height: 100vh;
+                    }
+
+        </style>
+    </head>
+    <body>
+
+        <!--NAV BAR-->
+        <div class="nav">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ann.html">ANNOUNCEMENTS</a></li>
+                    <li>
+                        <input type="checkbox" id="about">
+                        <label class="menubarABT" for="about">ABOUT</label>
+                        <ul class="submenu" id="submenuABT">
+                            <li><a href="desc.html">DESCRIPTION</a></li>
+                            <li><a href="miss.html">MISSION</a></li>
+                            <li><a href="vis.html">VISION</a></li>
+                            <li><a href="ach.html">ACHIEVEMENTS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input checked type="checkbox" id="members">
+                        <label class="menubarMEM" for="members">MEMBERS</label>
+                        <ul class="submenu" id="submenuMEM">
+                            <li><a class="active" href="fac.html" class="faculty">FACULTY</a>
+                                <ul class="submenu2">
+                                    <li><a href="ptfac.html">PART-TIME FACULTY</a></li>
+                                    <li><a class="active" href="nfac.html">NEW FACULTY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="off.html">OFFICERS</a></li>
+                            <li><a href="vol.html">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="merch.html">MERCHANDISE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="photos.html">PHOTOS</a></li>
+                    <li><a href="webdev.html">WEB DEVELOPERS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--TITLE-->
+        <div class="logo">
+            <img src="plmcss logo.png" alt="csslogo"> 
+            <p>PAMANTASAN NG LUNGSOD NG MAYNILA · COMPUTER SCIENCE SOCIETY </p>
+        </div>
+
+        <!--BUTTONS-->
+        <div class="buttons">
+            <button id="myBtn"></button>
+            <label for="myBtn">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Dr. Dennis Gonzales.jpg"></div>
+                    <div class="rectanglename">DR. GONZALES</div>
+                </div>
+            </label>
+
+            <button id="myBtn1"></button>
+            <label for="myBtn1">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Josh Clement Escobanez.jpg"></div>
+                    <div class="rectanglename">PROF. ESCOBANEZ</div>
+                </div>
+            </label>
+
+            <button id="myBtn2"></button>
+            <label for="myBtn2">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Fernandez Pineda.jpg"></div>
+                    <div class="rectanglename">PROF. PINEDA</div>
+                </div>
+            </label>
+
+            <button id="myBtn3"></button>
+            <label for="myBtn3">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof Herminino Lagunzad.jpg"></div>
+                    <div class="rectanglename">PROF. LAGUNZAD</div>
+                </div>
+            </label>
+
+            <br>
+
+            <button id="myBtn4"></button>
+            <label for="myBtn4">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Joel Cruz.jpg"></div>
+                    <div class="rectanglename">PROF. CRUZ</div>
+                </div>
+            </label>
+
+            <button id="myBtn5"></button>
+            <label for="myBtn5">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Florencio Contreras Jr..jpg"></div>
+                    <div class="rectanglename">PROF. CONTRERAS</div>
+                </div>
+            </label>
+
+            <button id="myBtn6"></button>
+            <label for="myBtn6">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Jonathan Morano.jpg"></div>
+                    <div class="rectanglename">PROF. MORANO</div>
+                </div>
+            </label>
+
+            <button id="myBtn7"></button>
+            <label for="myBtn7">
+                <div class="officer">
+                    <div class="rectanglepic"><img src="FACULTY/Photos/Prof. Ronald Fernandez.jpg"></div>
+                    <div class="rectanglename">PROF. FERNANDEZ</div>
+                </div>
+            </label>
+        </div>
+
+        <!--FOOTER-->
+        <div class="officertitle">NEW FACULTY</div><br><br>
+
+        <!-- F O O T E R  -->
+        <footer>
+            <div class="foot">
+            <div class="footer-block1">
+                <div class="f-pagename-block">
+                <h2 class="PLM">PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                <h2 class="CSSname">Computer Science Society</h2>
+                </div>
+    
+                <!-- SOCIALS -->
+                <div class="bottom-icons">
+                <ul class="socials">
+                    <li>
+                    <a
+                        href="https://www.facebook.com/PLMComputerScienceSociety
+                "
+                        ><i class="fa fa-facebook"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a href="mailto:plmcss.org@gmail.com"
+                        ><i class="fa fa-envelope"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a
+                        href="https://www.google.com.ph/maps/dir//Pamantasan+ng+Lungsod+ng+Maynila,+General+Luna,+Muralla+Street,+Intramuros,+Manila,+Metro+Manila/@14.5867874,120.9411578,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3397ca2336770053:0x1b731714778d3506!2m2!1d120.9761774!2d14.58679!3e0
+                "
+                        ><i class="fa fa-location-arrow"></i
+                    ></a>
+                    </li>
+                </ul>
+                </div>
+    
+                <div class="copyright">
+                <p class="copyright-content">
+                    Copyright &copy;2023 PLM CSS. <br />
+                    Designed by Group 3
+                </p>
+                </div>
+            </div>
+    
+            <div class="footer-block2">
+                <img src="plmcss logo.png" alt="" class="footerCSSLogo" />
+                <img src="plm logo.png" alt="" class="footerPLMLogo" />
+            </div>
+            </div>
+        </footer>
+
+        <!--MODALS-->
+        <div id="myModal" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Dr. Dennis Gonzales.jpg">
+            </div>
+            <div>
+                <span class="close"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">DR. DENNIS<br>GONZALES</div>
+            </div>
+        </div>
+
+
+        <div id="myModal1" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Josh Clement Escobanez.jpg">
+            </div>
+            <div>
+                <span class="close1"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. JOSH<br>CLEMENT ESCOBANEZ</div>
+            </div>
+        </div>
+
+        <div id="myModal2" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Fernandez Pineda.jpg">
+            </div>
+            <div>
+                <span class="close2"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. FERNANDEZ<br>PINEDA</div>
+            </div>
+        </div>
+
+        <div id="myModal3" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof Herminino Lagunzad.jpg">
+            </div>
+            <div>
+                <span class="close3"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. HERMINIÑO<br>LAGUNZAD</div>
+            </div>
+        </div>
+
+        <div id="myModal4" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Joel Cruz.jpg">
+            </div>
+            <div>
+                <span class="close4"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. JOEL<br>CRUZ</div>
+            </div>
+        </div>
+
+        <div id="myModal5" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Florencio Contreras Jr..jpg">
+            </div>
+            <div>
+                <span class="close5"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. FLORENCIO<br>CONTRERAS JR.</br></div>
+            </div>
+        </div>
+
+        <div id="myModal6" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Jonathan Morano.jpg">
+            </div>
+            <div>
+                <span class="close6"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. JONATHAN<br>MORANO</div>
+            </div>
+        </div>
+
+        <div id="myModal7" class="modal">
+            <div class="pic">
+                <img src="FACULTY/Photos/Prof. Ronald Fernandez.jpg">
+            </div>
+            <div>
+                <span class="close7"><i class="fa-solid fa-xmark"></i></span><br>
+                <div class="facName">PROF. RONALD<br>FERNANDEZ</div>
+            </div>
+        </div>
+
+        <script>
+ 
+            var modal = document.getElementById("myModal");
+     
+            var btn = document.getElementById("myBtn");
+     
+            var span = document.getElementsByClassName("close")[0];
+     
+            btn.onclick = function() {
+            modal.style.visibility = "visible";
+            }
+     
+            span.onclick = function() {
+            modal.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal1 = document.getElementById("myModal1");
+     
+            var btn1 = document.getElementById("myBtn1");
+     
+            var span1 = document.getElementsByClassName("close1")[0];
+     
+            btn1.onclick = function() {
+            modal1.style.visibility = "visible";
+            }
+     
+            span1.onclick = function() {
+            modal1.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal2 = document.getElementById("myModal2");
+     
+            var btn2 = document.getElementById("myBtn2");
+     
+            var span2 = document.getElementsByClassName("close2")[0];
+     
+            btn2.onclick = function() {
+            modal2.style.visibility = "visible";
+            }
+     
+            span2.onclick = function() {
+            modal2.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal2) {
+                modal2.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal3 = document.getElementById("myModal3");
+     
+            var btn3 = document.getElementById("myBtn3");
+     
+            var span3 = document.getElementsByClassName("close3")[0];
+     
+            btn3.onclick = function() {
+            modal3.style.visibility = "visible";
+            }
+     
+            span3.onclick = function() {
+            modal3.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal3) {
+                modal3.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal4 = document.getElementById("myModal4");
+     
+            var btn4 = document.getElementById("myBtn4");
+     
+            var span4 = document.getElementsByClassName("close4")[0];
+     
+            btn4.onclick = function() {
+            modal4.style.visibility = "visible";
+            }
+     
+            span4.onclick = function() {
+            modal4.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal4) {
+                modal4.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal5 = document.getElementById("myModal5");
+     
+            var btn5 = document.getElementById("myBtn5");
+     
+            var span5 = document.getElementsByClassName("close5")[0];
+     
+            btn5.onclick = function() {
+            modal5.style.visibility = "visible";
+            }
+     
+            span5.onclick = function() {
+            modal5.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal5) {
+                modal5.style.visibility = "hidden";
+            }
+            }
+     
+            //BREAK
+            var modal6 = document.getElementById("myModal6");
+     
+            var btn6 = document.getElementById("myBtn6");
+     
+            var span6 = document.getElementsByClassName("close6")[0];
+     
+            btn6.onclick = function() {
+            modal6.style.visibility = "visible";
+            }
+     
+            span6.onclick = function() {
+            modal6.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal6) {
+                modal6.style.visibility = "hidden";
+            }
+            }
+
+            //BREAK
+            var modal7 = document.getElementById("myModal7");
+     
+            var btn7 = document.getElementById("myBtn7");
+     
+            var span7 = document.getElementsByClassName("close7")[0];
+     
+            btn7.onclick = function() {
+            modal7.style.visibility = "visible";
+            }
+     
+            span7.onclick = function() {
+            modal7.style.visibility = "hidden";
+            }
+     
+            window.onclick = function(event) {
+            if (event.target == modal7) {
+                modal7.style.visibility = "hidden";
+            }
+            }
+           
+        </script>
+    </body>
+</html>

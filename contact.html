@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact | PLM CSS</title>
+        <link rel="shortcut icon" type="images/png" href="plmcss logo.png">
+        <script src="https://kit.fontawesome.com/d1e7505c10.js" crossorigin="anonymous"></script>
+        <style>
+         /* ENTIRE PAGE */
+            @font-face {
+                font-family: "GlacialIndifference";
+                src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf");
+            }
+
+            @font-face {
+                font-family: "GlacialIndifference";
+                src: url("fonts/glacial-indifference/GlacialIndifference-Bold.otf");
+                font-weight: bold;
+            }
+                
+            * {
+                font-family: GlacialIndifference;
+                font-weight: normal;
+                margin: 0;
+            }
+
+        /* ENTIRE BODY */
+            body {
+                background-image:url(contact/csscontact.png);
+                height: 100%;
+                background-size: cover;
+            }
+
+            body::-webkit-scrollbar, .menubar::-webkit-scrollbar {
+                display: none;
+            }
+
+        /* CONTACT */
+            .contact {
+                margin-top: 190px;
+                display: block;
+                margin-left: 15%;
+            }
+            
+            .text, .links {
+                float: left;
+                text-align: left;
+                margin-bottom: 200px;
+            }
+
+            .contact h1, .contact h2, .contact h3 {
+                font-size: 90px;
+                line-height: 80px;
+                color: #f1db26;
+            }
+
+            .contact h2, .contacth3 {
+                font-weight: bold;
+            }
+
+            .contact h3 {
+                color: white;
+                margin-top: 0;
+                padding-top: 10px;
+                text-decoration: underline;
+            }
+
+            .links {
+                margin-top: 40px;
+                font-size: 35px;
+                margin-left: 50px;
+            }
+
+            .links a {
+                border-radius: 50px;
+                padding: 50px;
+                line-height: 160px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+
+            .links i {
+                margin-right: 20px;
+                margin-left: -20px;
+                margin-top: -6px;
+                font-size: 90px;
+                vertical-align: middle;
+            }
+
+            #mail {
+                background-color: #f1db26;
+                color: black;
+            }
+
+            #fb {
+                background-color: black;
+                color: white;
+            }
+
+            .links #mail i{
+                color: black;
+            }
+
+            .links #fb i{
+                color: white;
+            }
+
+            a:hover{
+                background-color: rgba(255, 255, 255, 0.596);
+            }
+
+        /* NAVIGATION BAR */
+
+                .nav {
+                    z-index: 111;
+                    position: absolute;
+                    height: 100%;
+                    margin-top: -180px;
+                    margin-bottom: 0;
+                    float: left;
+                }
+
+                .nav a {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                a.active,a:hover,.menubarABT:hover,.menubarMEM:hover{
+                    padding-left: 26px;
+                    background-color: #ffffff;
+                    color: black;
+                    transition: .5s;
+                }
+
+                li a:hover,.menubarABT:hover,.menubarMEM:hover {
+                    background-color: #ffffff85;
+                }
+
+            /* MENUBAR */
+
+                .menubar {
+                    background-color: #22314dbb;
+                    position: fixed;
+                    overflow: auto;
+                    right: -450px;
+                    width: 450px;
+                    height: 100%;
+                    transition: all .5s ease;
+                }
+
+            /* MENU */
+            
+                .menu {
+                    list-style-type: none;
+                    overflow: hidden;
+                    margin-left: -40px;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+            /* SUBMENU */
+
+                .submenu, .submenu2 {
+                    width: 100%;
+                    position: static;
+                    max-height: 0px;
+                    overflow: hidden;
+                    list-style-type: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+
+                .submenu a, .submenu2 a {
+                    font-weight: normal;
+                    font-size: 23px;
+                }
+            
+
+            /* BUTTONS */
+
+                label #btn, label #cancel {
+                    position: absolute;
+                    cursor: pointer;
+                    font-size: 30px;
+                    color: white;
+                }
+
+                label #btn {
+                    position: fixed;
+                    right: 40px;
+                    top: 20px;
+                    transition: all .5s;
+                }
+
+                label #cancel {
+                    position: fixed;
+                    font-size: 35px;
+                    z-index: 1111;
+                    right: 40px;
+                    top: 20px;
+                    opacity: 0;
+                    transition: all .5s ease;
+                }
+
+                .menubarABT, .menubarMEM {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+            /* BUTTON FUNCTIONS */
+
+                #check, #about, #members {
+                    display: none;
+                }
+
+                #check:checked ~ .menubar{
+                    right: 0;
+                }
+
+                #check:checked ~ label #btn {
+                    right: 400px;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                #check:checked ~ label #cancel {
+                    transform: rotate(90deg);
+                    opacity: 100%;
+                    right: 470px;
+                }
+
+                #about:checked ~ #submenuABT{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #about:checked ~ .menubarABT{
+                    text-indent: 50px;
+                }
+
+                #members:checked ~ #submenuMEM {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #members:checked ~ .menubarMEM {
+                    text-indent: 50px;
+                }
+
+            /* DROPDOWNS */
+
+                .submenu li:hover .submenu2{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+            /* FOOTERRR*/
+                .foot  {
+                    background-color: #000000;
+                    opacity: .8;
+                    color: #e0e3e4;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 0;
+                    padding-bottom: 25px;
+                    margin-top: 80px;
+                }
+
+                .footer-block1 {
+                    display: inline-block;
+                    padding-top: 30px;
+                    padding-right: 30px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .f-pagename-block {
+                    display: block;
+                    
+
+                }
+
+                .PLM {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 300;
+                    font-size: .9em;
+                    letter-spacing: .2;   
+                }
+
+                .CSSname {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 450;
+                    font-size: 1.8em;
+                    letter-spacing: .3;
+                    margin-bottom: 0;
+                    padding-bottom: 0;     
+                }
+
+
+                
+                .copyright {
+                    display: block;
+                    font-size: 12px;
+                    margin-top: 23px;
+                }
+
+                .copyright-content {
+                    font-size: 14px;
+                    max-width: 250px;
+                    letter-spacing: 0.6px;
+                }
+
+
+                /* LOGOS */
+                .footer-block2 {
+                    display: inline-block;
+                    padding-top: 35px;
+                    padding-left: 25px;
+                }
+
+                .footerCSSLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                .footerPLMLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+
+                /* SOCIALS */
+
+                .bottom-icons {
+                    padding-top: 5px;
+                }
+                .socials {
+                    list-style: none;
+                    display: flex;
+                    padding-left: 0px;
+                                
+                }
+
+                .socials li {
+                    margin: 0 10px;
+                }
+
+                .socials a {
+                    text-decoration: none;
+                    color: #e0e3e4;
+                }
+        
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ann.html">ANNOUNCEMENTS</a></li>
+                    <li>
+                        <input type="checkbox" id="about">
+                        <label class="menubarABT" for="about">ABOUT</label>
+                        <ul class="submenu" id="submenuABT">
+                            <li><a href="desc.html">DESCRIPTION</a></li>
+                            <li><a href="miss.html">MISSION</a></li>
+                            <li><a href="vis.html">VISION</a></li>
+                            <li><a href="ach.html">ACHIEVEMENTS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="members">
+                        <label class="menubarMEM" for="members">MEMBERS</label>
+                        <ul class="submenu" id="submenuMEM">
+                            <li><a href="fac.html" class="faculty">FACULTY</a>
+                                <ul class="submenu2">
+                                    <li><a href="ptfac.html">PART-TIME FACULTY</a></li>
+                                    <li><a href="nfac.html">NEW FACULTY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="off.html">OFFICERS</a></li>
+                            <li><a href="vol.html">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="merch.html">MERCHANDISE</a></li>
+                    <li><a class="active" href="contact.html">CONTACT</a></li>
+                    <li><a href="photos.html">PHOTOS</a></li>
+                    <li><a href="webdev.html">WEB DEVELOPERS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="text">
+                <h1>NEED TO</h1>
+                <h2>TALK?</h2>
+                <h1>FIND US</h1>
+                <h3>HERE:</h3>
+            </div>
+            <div class="links">
+                <a href="mailto:plmcss.org@gmail.com" id="mail"><i class="fa-solid fa-envelope"></i>plmcss.org@gmail.com</a><br>
+                <a href="https://www.facebook.com/PLMComputerScienceSociety" id="fb"><i class="fa-brands fa-facebook"></i>PLMComputerScienceSociety</a>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <!-- F O O T E R  -->
+        <footer>
+            <div class="foot">
+            <div class="footer-block1">
+                <div class="f-pagename-block">
+                <h2 class="PLM">PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                <h2 class="CSSname">Computer Science Society</h2>
+                </div>
+    
+                <!-- SOCIALS -->
+                <div class="bottom-icons">
+                <ul class="socials">
+                    <li>
+                    <a
+                        href="https://www.facebook.com/PLMComputerScienceSociety
+                "
+                        ><i class="fa fa-facebook"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a href="mailto:plmcss.org@gmail.com"
+                        ><i class="fa fa-envelope"></i
+                    ></a>
+                    </li>
+                    <li>
+                    <a
+                        href="https://www.google.com.ph/maps/dir//Pamantasan+ng+Lungsod+ng+Maynila,+General+Luna,+Muralla+Street,+Intramuros,+Manila,+Metro+Manila/@14.5867874,120.9411578,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3397ca2336770053:0x1b731714778d3506!2m2!1d120.9761774!2d14.58679!3e0
+                "
+                        ><i class="fa fa-location-arrow"></i
+                    ></a>
+                    </li>
+                </ul>
+                </div>
+    
+                <div class="copyright">
+                <p class="copyright-content">
+                    Copyright &copy;2023 PLM CSS. <br />
+                    Designed by Group 3
+                </p>
+                </div>
+            </div>
+    
+            <div class="footer-block2">
+                <img src="plmcss logo.png" alt="" class="footerCSSLogo" />
+                <img src="plm logo.png" alt="" class="footerPLMLogo" />
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

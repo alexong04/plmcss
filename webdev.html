@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Developers | PLM CSS</title>
+        <link rel="shortcut icon" type="images/png" href="plmcss logo.png">
+        <script src="https://kit.fontawesome.com/d1e7505c10.js" crossorigin="anonymous"></script>
+        <style>
+            /* ENTIRE PAGE */
+                @font-face {
+                    font-family: "GlacialIndifference";
+                    src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf");
+                }
+
+                @font-face {
+                    font-family: "GlacialIndifference";
+                    src: url("fonts/glacial-indifference/GlacialIndifference-Bold.otf");
+                    font-weight: bold;
+                }
+
+                @font-face {
+                    font-family: "RobotoSlab";
+                    src: url("fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+                }
+
+                @font-face {
+                    font-family: "Secular One";
+                    src: url("fonts/Secular_One/SecularOne-Regular.ttf");
+                }
+
+                * {
+                    margin: 0;
+                }
+
+                html {
+                    scroll-behavior: smooth;
+                }
+
+             /* ENTIRE BODY */
+
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: GlacialIndifference;
+                }
+
+            /* FIRST PAGE */
+
+                .firstPage{
+                    margin: 0;
+                    background-image: url(plmbg2.jpg);
+                    height: fit-content;
+                    background-size: cover;
+                    font-family: GlacialIndifference;
+                    text-align: center;
+                    background-attachment: fixed;
+                    padding-bottom: 50px;
+                }
+
+                .title {
+                    padding-top: 50px;
+                    color: white;
+                }
+
+                .plm img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .plm div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .firstPage h1 {
+                    margin-top: 50px;
+                    font-size: 85px;
+                }
+
+                .firstPage h2 {
+                    color: #f1db26;
+                    font-size: 30px;
+                    margin-top: -5px;
+                }
+
+                .firstPage h4 {
+                    font-size: 30px;
+                    font-weight: normal;
+                }
+
+                .firstPage h5 {
+                    margin-left: 10px;
+                    font-size: 20px;
+                    font-weight: normal;
+                }
+
+                .memberIcons {
+                    margin-top: 50px;
+                }
+
+                .memberIcons div {
+                    display: inline-block;
+                }
+
+                .memberIcon {
+                    margin: 10px;
+                }
+
+                .memberIcon div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .memberIcon img {
+                    position: relative;
+                    height: 120px;
+                    width: 120px;
+                    border-radius: 100px;
+                    z-index: 1;
+                }
+
+                .memberIcon h3 {
+                    background-color: #1c2120;
+                    outline: 5px solid rgba(255, 255, 255, 0.615);
+                    color: white;
+                    padding: 20px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    margin-left: -20px;
+                    z-index: -1;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                }
+
+            /* MEMBERS PAGES */
+
+                .membersPage {
+                    margin: 0;
+                    padding-top: 50px;
+                    background-color: #22314D;
+                    opacity: 1;
+                    background-image:  linear-gradient(#636580 4px, transparent 4px), linear-gradient(to right, #636580 4px, #22314D 4px);
+                    background-size: 80px 80px;
+                    height: fit-content;
+                }
+
+                .mPageContent {
+                    background-color: #1c2120;
+                    margin-top: 200px;
+                    margin-bottom: 200px;
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                    text-align: center;
+                }
+
+                .square, .pic, .membInfo {
+                    display: inline-block;
+                }
+
+                .square, .pic {
+                    vertical-align: middle;
+                }
+
+                .square img {
+                    height: 300px;
+                    width: 300px;
+                    z-index: -1;
+                }
+
+                .pic img {
+                    height: 250px;
+                    width: 250px;
+                    z-index: 1;
+                    position: relative;
+                    margin-left: -200px;
+                    border-radius: 200px;
+                }
+
+                .membInfo {
+                    vertical-align: bottom;
+                    z-index: -1;
+                    background-color: #1c2120;
+                    color: white;
+                    width: 400px;
+                    margin-left: -30px;
+                    padding: 40px;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    outline: 3px solid white;
+                    border-radius: 40px;
+                }
+
+                .name {
+                    color: #f1db26;
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                .age {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    font-family: RobotoSlab;
+                }
+
+                #memb8Page {
+                    margin-bottom: 100px;
+                }
+
+                .button a {
+                    text-align: center;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 25px;
+                }
+
+            /* NAVIGATION BAR */
+
+                .nav {
+                    z-index: 111;
+                    position: absolute;
+                    height: 100%;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    float: left;
+                }
+
+                .nav a {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                .nav a.active,.nav a:hover,.menubarABT:hover,.menubarMEM:hover{
+                    padding-left: 26px;
+                    background-color: #ffffff;
+                    color: black;
+                    transition: .5s;
+                }
+
+                .nav li a:hover,.menubarABT:hover,.menubarMEM:hover {
+                    background-color: #ffffff85;
+                }
+
+            /* MENUBAR */
+
+                .menubar {
+                    background-color: #22314dbd;
+                    position: fixed;
+                    overflow: auto;
+                    right: -450px;
+                    width: 450px;
+                    height: 100%;
+                    transition: all .5s ease;
+                }
+
+            /* MENU */
+            
+                .menu {
+                    list-style-type: none;
+                    overflow: hidden;
+                    margin-left: -40px;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+            /* SUBMENU */
+
+                .submenu, .submenu2 {
+                    width: 100%;
+                    position: static;
+                    max-height: 0px;
+                    overflow: hidden;
+                    list-style-type: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+
+                .submenu a, .submenu2 a {
+                    font-weight: normal;
+                    font-size: 23px;
+                }
+            
+
+            /* BUTTONS */
+
+                label #btn, label #cancel {
+                    position: absolute;
+                    cursor: pointer;
+                    font-size: 30px;
+                    color: white;
+                }
+
+                label #btn {
+                    position: fixed;
+                    right: 40px;
+                    top: 20px;
+                    transition: all .5s;
+                }
+
+                label #cancel {
+                    position: fixed;
+                    font-size: 35px;
+                    z-index: 1111;
+                    right: 40px;
+                    top: 20px;
+                    opacity: 0;
+                    transition: all .5s ease;
+                }
+
+                .menubarABT, .menubarMEM {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    text-indent: 40px;
+                    padding: 16px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+            /* BUTTON FUNCTIONS */
+
+                #check, #about, #members {
+                    display: none;
+                }
+
+                #check:checked ~ .menubar{
+                    right: 0;
+                }
+
+                #check:checked ~ label #btn {
+                    right: 400px;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                #check:checked ~ label #cancel {
+                    transform: rotate(90deg);
+                    opacity: 100%;
+                    right: 470px;
+                }
+
+                #about:checked ~ #submenuABT{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #about:checked ~ .menubarABT{
+                    text-indent: 50px;
+                }
+
+                #members:checked ~ #submenuMEM {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+                #members:checked ~ .menubarMEM {
+                    text-indent: 50px;
+                }
+
+            /* DROPDOWNS */
+
+                .submenu li:hover .submenu2{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .5s ease;
+                    max-height: 100vh;
+                }
+
+            /* FOOTERRR*/
+                .foot  {
+                    background-color: #000000;
+                    opacity: .8;
+                    color: #e0e3e4;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 0;
+                    padding-bottom: 25px;
+                    margin-top: 80px;
+                }
+
+                .footer-block1 {
+                    display: inline-block;
+                    padding-top: 30px;
+                    padding-right: 30px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .f-pagename-block {
+                    display: block;
+                    
+
+                }
+
+                .PLM {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 300;
+                    font-size: .9em;
+                    letter-spacing: .2;   
+                }
+
+                .CSSname {
+                    font-family: 'Secular One', sans-serif;
+                    font-weight: 450;
+                    font-size: 1.8em;
+                    letter-spacing: .3;
+                    margin-bottom: 0;
+                    padding-bottom: 0;     
+                }
+
+
+                
+                .copyright {
+                    display: block;
+                    font-size: 12px;
+                    margin-top: 23px;
+                }
+
+                .copyright-content {
+                    font-size: 14px;
+                    max-width: 250px;
+                    letter-spacing: 0.6px;
+                }
+
+
+                /* LOGOS */
+                .footer-block2 {
+                    display: inline-block;
+                    padding-top: 35px;
+                    padding-left: 25px;
+                }
+
+                .footerCSSLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                .footerPLMLogo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+
+                /* SOCIALS */
+
+                .bottom-icons {
+                    padding-top: 5px;
+                }
+                .socials {
+                    list-style: none;
+                    display: flex;
+                    padding-left: 0px;
+                                
+                }
+
+                .socials li {
+                    margin: 0 10px;
+                }
+
+                .socials a {
+                    text-decoration: none;
+                    color: #e0e3e4;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ann.html">ANNOUNCEMENTS</a></li>
+                    <li>
+                        <input type="checkbox" id="about">
+                        <label class="menubarABT" for="about">ABOUT</label>
+                        <ul class="submenu" id="submenuABT">
+                            <li><a href="desc.html">DESCRIPTION</a></li>
+                            <li><a href="miss.html">MISSION</a></li>
+                            <li><a href="vis.html">VISION</a></li>
+                            <li><a href="ach.html">ACHIEVEMENTS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="members">
+                        <label class="menubarMEM" for="members">MEMBERS</label>
+                        <ul class="submenu" id="submenuMEM">
+                            <li><a href="fac.html" class="faculty">FACULTY</a>
+                                <ul class="submenu2">
+                                    <li><a href="ptfac.html">PART-TIME FACULTY</a></li>
+                                    <li><a href="nfac.html">NEW FACULTY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="off.html">OFFICERS</a></li>
+                            <li><a href="vol.html">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="merch.html">MERCHANDISE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="photos.html">PHOTOS</a></li>
+                    <li><a class="active" href="webdev.html">WEB DEVELOPERS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="firstPage">
+            <div class="title" id="title">
+                <div class="plm">
+                    <div><img src="plm logo.png"></div>
+                    <div><h5>PAMANTASAN NG LUNGSOD NG MAYNILA</h5></div>
+                </div>
+                <h2>ICC 0101-5 GROUP 3</h2>
+                <h1>WEB DEVELOPERS</h1>
+                <h4>ACADEMIC YEAR 2022-2023</h4>
+            </div>
+            <div class="memberIcons">
+                <div class="memberIcon" id="memb1">
+                    <a href="#memb1Page">
+                        <div><img src="WEBDEV Photos/Amper.jpg" alt="amper"></div>
+                        <div><h3>Amper</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb2">
+                    <a href="#memb2Page">
+                        <div><img src="WEBDEV Photos/Aguinaldo.png" alt="aguinaldo"></div>
+                        <div><h3>Aguinaldo</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb3">
+                    <a href="#memb3Page">
+                        <div><img src="WEBDEV Photos/Enriquez.jpg"></div>
+                        <div><h3>Enriquez</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb4">
+                    <a href="#memb4Page">
+                        <div><img src="WEBDEV Photos/Habana.jpg"></div>
+                        <div><h3>Habana</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb5">
+                    <a href="#memb5Page">
+                        <div><img src="WEBDEV Photos/Lim.jpg"></div>
+                        <div><h3>Lim</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb6">
+                    <a href="#memb6Page">
+                        <div><img src="WEBDEV Photos/Ocampo.jpg"></div>
+                        <div><h3>Ocampo</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb7">
+                    <a href="#memb7Page">
+                        <div><img src="WEBDEV Photos/Ong.jpg"></div>
+                        <div><h3>Ong</h3></div>
+                    </a>
+                </div>
+                <div class="memberIcon" id="memb8">
+                    <a href="#memb8Page">
+                        <div><img src="WEBDEV Photos/Tolin.jpg"></div>
+                        <div><h3>Tolin</h3></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="membersPage">
+            <div class="mPageContent" id="memb1Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Amper.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Amper, Miracle Joy F.
+                    </div>
+                    <div class="age">
+                        (18) June 01, 2004
+                    </div>
+                    <div class="desc">
+                        She/Her. I am a museum full of art but you had your eyes shut. A Florentino Torres High School alumnus who specialized Information and Communications Technology at Universidad De Manila graduated with high honors, and is currently a freshman taking Bachelor of Science in Computer Science at Pamantasan ng Lungsod ng Maynila. Kpop fan since 2015 and a wattpad user since 2014.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb2Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Aguinaldo.png"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Aguinaldo, Samantha S.
+                    </div>
+                    <div class="age">
+                        (18) August 31, 2004
+                    </div>
+                    <div class="desc">
+                        She/ Her. Currently a freshman student at Pamantasan ng Lungsod ng Maynila studying computer science; took Information and Communications Technology (ICT) strand at Universidad de Manila, and graduated with high honors. A former member of the robotics club in Ramon Magsaysay High School, and was the associate editor and photojournalist of the mentioned school’s newspaper. An introvert who loves reading books, solving puzzles, and watching sitcoms—have seen Brooklyn Nine-Nine four times. Is eager for knowledge, and enjoys learning new things.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb3Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Enriquez.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Enriquez, Sybil Mitch S.
+                    </div>
+                    <div class="age">
+                        (18) June 5, 2004
+                    </div>
+                    <div class="desc">
+                        She/Her. Is socially anxious and struggles from a fear of public speaking. Loves to read manga/manhwa or watch anime during her free time. Yoasobi enthusiast ♡ Kpop fan since 2016. Graduated high school at Lakan Dula HS, and senior  high at Universidad De Manila.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb4Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Habana.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Habana, Mathew Shelwyn B.
+                    </div>
+                    <div class="age">
+                        (19) January 5, 2004
+                    </div>
+                    <div class="desc">
+                        I have anger issues. Honor student.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb5Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Lim.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Lim, Darius G.
+                    </div>
+                    <div class="age">
+                        (18) June 30, 2004
+                    </div>
+                    <div class="desc">
+                        I like puzzles, especially in coding! Everytime I encounter a bug or error, my curiosity brims with passion to solve that particular problem! Fun fact about me is that I originally pursued BS Chemical Engineering in PLM, however since it was so hard and so rigid, I switched to my course now in BS Computer Science. I decided on this course because I have always been interested in Computers since I was a kid.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb6Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Ocampo.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Ocampo, Tristan Godwin Josh
+                    </div>
+                    <div class="age">
+                        (19) March 11, 2003
+                    </div>
+                    <div class="desc">
+                        An active student leader in junior high school and senior highschool. Graduated from CEU Manila under the strand of Science, Technology, Engineering, Engineering and Mathematics  (STEM). Spends  most of the time reading nonfiction books. An aspiring tech entrepreneur.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb7Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Ong.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Ong, Alexandra A.
+                    </div>
+                    <div class="age">
+                        (18) MARCH 1, 2004
+                    </div>
+                    <div class="desc">
+                        They/Him. Has experience with C/C++, VEX IQ, Arduino, and digital arts. Student Council Vice President and Valedictorian in high school and an Academic Awardee in senior high school. In 2019, joined the SPUM robotics club, competed in the ROBOTHON held at MAPUA and the Innovative Project Competition at SPUM. Loves reading shounen ai manga, playing Genshin Impact and JRPGS, and listening to Kenshi Yonezu and back number in their spare time.
+                    </div>
+                </div>
+            </div>
+            <div class="mPageContent" id="memb8Page">
+                <div class="square"><img src="WEBDEV Photos/mimimalsquares.png"></div>
+                <div class="pic"><img src="WEBDEV Photos/Tolin.jpg"></div>
+                <div class="membInfo">
+                    <div class="name">
+                        Tolin, Alexis Reginald R.
+                    </div>
+                    <div class="age">
+                        (18) October 4, 2004
+                    </div>
+                    <div class="desc">
+                        I’m an ambivert kind of person, and I love playing instruments such as ukulele, electric & acoustic guitar and I also play piano. Met KARD on the backstage at the Global Peace Festival 2022.
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <a href="#title"><h4>BACK TO TOP</h4></a>
+            </div>
+
+            <!-- F O O T E R  -->
+            <footer>
+                <div class="foot">
+                <div class="footer-block1">
+                    <div class="f-pagename-block">
+                    <h2 class="PLM">PAMANTASAN NG LUNGSOD NG MAYNILA</h2>
+                    <h2 class="CSSname">Computer Science Society</h2>
+                    </div>
+        
+                    <!-- SOCIALS -->
+                    <div class="bottom-icons">
+                    <ul class="socials">
+                        <li>
+                        <a
+                            href="https://www.facebook.com/PLMComputerScienceSociety
+                    "
+                            ><i class="fa fa-facebook"></i
+                        ></a>
+                        </li>
+                        <li>
+                        <a href="mailto:plmcss.org@gmail.com"
+                            ><i class="fa fa-envelope"></i
+                        ></a>
+                        </li>
+                        <li>
+                        <a
+                            href="https://www.google.com.ph/maps/dir//Pamantasan+ng+Lungsod+ng+Maynila,+General+Luna,+Muralla+Street,+Intramuros,+Manila,+Metro+Manila/@14.5867874,120.9411578,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3397ca2336770053:0x1b731714778d3506!2m2!1d120.9761774!2d14.58679!3e0
+                    "
+                            ><i class="fa fa-location-arrow"></i
+                        ></a>
+                        </li>
+                    </ul>
+                    </div>
+        
+                    <div class="copyright">
+                    <p class="copyright-content">
+                        Copyright &copy;2023 PLM CSS. <br />
+                        Designed by Group 3
+                    </p>
+                    </div>
+                </div>
+        
+                <div class="footer-block2">
+                    <img src="plmcss logo.png" alt="" class="footerCSSLogo" />
+                    <img src="plm logo.png" alt="" class="footerPLMLogo" />
+                </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
